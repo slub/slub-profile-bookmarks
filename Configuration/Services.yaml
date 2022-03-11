@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Slub\SlubProfileBookmarks\:
+    resource: '../Classes/*'
+
+  Slub\SlubProfileBookmarks\Http\Request:
+    public: true
+
+  Slub\SlubProfileBookmarks\Routing\UriGenerator:
+    public: true
+
+  Slub\SlubProfileBookmarks\Service\BookmarkService:
+    public: true

@@ -1,0 +1,10 @@
+routeEnhancers:
+  SlubBookmarksBookmarkList:
+    type: Simple
+    limitToPages: [22]
+    routePath: '/{user}'
+    requirements:
+      user: '[0-9]{1,10}'
+    _arguments:
+      user: 'tx_slubprofilebookmarks_bookmarklist/user'
+
