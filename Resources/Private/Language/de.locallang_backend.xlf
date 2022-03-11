@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2012-11-01T14:46:01Z"  product-name="slub_profile_bookmarks">
+		<header/>
+		<body>
+			<trans-unit id="plugin.title" resname="plugin.title">
+				<source>Bookmarks</source>
+				<target>Merkliste</target>
+			</trans-unit>
+
+			<trans-unit id="plugin.bookmarklist.title" resname="plugin.bookmarklist.title">
+				<source>Bookmark list</source>
+				<target>Merkliste</target>
+			</trans-unit>
+			<trans-unit id="plugin.bookmarklist.description" resname="plugin.bookmarklist.description">
+				<source>List of bookmarks.</source>
+				<target>Auflistung von gemerkten Seiten.</target>
+			</trans-unit>
+
+			<trans-unit id="extensionConfiguration.bookmarkList.requestUri" resname="extensionConfiguration.bookmarkList.requestUri">
+				<source>URI: The uri has to begin with "https://". Another DDEV container can be addressed directly via the container with "https: // ddev - ### YOUR-CONTAINER ### - web" or the domain, if configured "external_links".</source>
+				<target>URI: Die URI muss mit "https://" anfangen. Ein anderer DDEV-Container kann direkt über den Container mit "https://ddev-###YOUR-CONTAINER###-web" angesprochen werden oder die Domain, wenn "external_links" konfiguriert.</target>
+			</trans-unit>
+			<trans-unit id="extensionConfiguration.bookmarkList.requestArgumentIdentifier" resname="extensionConfiguration.bookmarkList.requestArgumentIdentifier">
+				<source>Argument identifier: The parameter needs to be written in a specific identifier. Default value "tx_slubfindbookmarks_bookmarklist". Change only if you know what you do.</source>
+				<target>Parameter ID: Die Parameter benötigen einen spezifischen Container. Default-Wert "tx_slubfindbookmarks_bookmarklist". Nur ändern, wenn wirklich notwendig.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,5 @@
+# cat=API bookmark list; type=string; label=LLL:EXT:slub_profile_bookmarks/Resources/Private/Language/locallang_backend.xlf:extensionConfiguration.bookmarkList.requestUri
+bookmarkList.requestUri =
+
+# cat=API bookmark list; type=string; label=LLL:EXT:slub_profile_bookmarks/Resources/Private/Language/locallang_backend.xlf:extensionConfiguration.bookmarkList.requestArgumentIdentifier
+bookmarkList.requestArgumentIdentifier = tx_slubfindbookmarks_bookmarklist

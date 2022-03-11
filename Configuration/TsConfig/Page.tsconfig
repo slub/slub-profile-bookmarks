@@ -1,0 +1,18 @@
+mod {
+  wizards.newContentElement.wizardItems.slubprofilebookmarks {
+    after = common
+    header = LLL:EXT:slub_profile_bookmarks/Resources/Private/Language/locallang_backend.xlf:plugin.title
+
+    elements {
+      slubprofilebookmarks_bookmarklist {
+        iconIdentifier = slubprofilebookmarks-wizard-bookmarklist
+        iconOverlay = slubprofilebookmarks-overlay-extension
+        title = LLL:EXT:slub_profile_bookmarks/Resources/Private/Language/locallang_backend.xlf:plugin.bookmarklist.title
+        description = LLL:EXT:slub_profile_bookmarks/Resources/Private/Language/locallang_backend.xlf:plugin.bookmarklist.description
+        tt_content_defValues.CType = slubprofilebookmarks_bookmarklist
+      }
+    }
+
+    show := addToList(slubprofilebookmarks_bookmarklist)
+  }
+}
