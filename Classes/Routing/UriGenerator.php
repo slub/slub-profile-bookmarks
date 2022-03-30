@@ -15,20 +15,9 @@ use Slub\SlubProfileBookmarks\Domain\Model\Dto\ApiBookmarkListConfiguration;
 use Slub\SlubProfileBookmarks\Utility\LanguageUtility;
 use TYPO3\CMS\Core\Context\Exception\AspectNotFoundException;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
 
 class UriGenerator
 {
-    protected ConfigurationManager $configurationManager;
-
-    /**
-     * @param ConfigurationManager $configurationManager
-     */
-    public function __construct(ConfigurationManager $configurationManager)
-    {
-        $this->configurationManager = $configurationManager;
-    }
-
     /**
      * @param array $additionalParameters
      * @return string
