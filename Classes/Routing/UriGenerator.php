@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Slub\SlubProfileBookmarks\Routing;
 
+use Slub\SlubProfileBookmarks\Domain\Model\Dto\ApiAppKeyConfiguration;
 use Slub\SlubProfileBookmarks\Domain\Model\Dto\ApiBookmarkListConfiguration;
 use Slub\SlubProfileBookmarks\Utility\LanguageUtility;
 use TYPO3\CMS\Core\Context\Exception\AspectNotFoundException;
@@ -27,6 +28,22 @@ class UriGenerator
     {
         /** @var ApiBookmarkListConfiguration $apiConfiguration */
         $apiConfiguration = GeneralUtility::makeInstance(ApiBookmarkListConfiguration::class);
+
+        /** @extensionScannerIgnoreLine */
+        $requestUri = $apiConfiguration->getRequestUri();
+        $requestArgumentIdentifier = $apiConfiguration->getRequestArgumentIdentifier();
+
+        return $this->build($requestUri, $requestArgumentIdentifier, $additionalParameters);
+    }
+    /**
+     * @param array $additionalParameters
+     * @return string
+     * @throws AspectNotFoundException
+     */
+    public function buildAppKey(array $additionalParameters): string
+    {
+        /** @var ApiAppKeyConfiguration $apiConfiguration */
+        $apiConfiguration = GeneralUtility::makeInstance(ApiAppKeyConfiguration::class);
 
         /** @extensionScannerIgnoreLine */
         $requestUri = $apiConfiguration->getRequestUri();

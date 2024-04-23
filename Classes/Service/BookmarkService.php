@@ -21,20 +21,24 @@ class BookmarkService
     protected BookmarkArgumentSanitization $bookmarkArgumentSanitization;
     protected Request $request;
     protected UriGenerator $uriGenerator;
+    protected AppKeyService $appKeyService;
 
     /**
      * @param BookmarkArgumentSanitization $bookmarkArgumentSanitization
      * @param Request $request
      * @param UriGenerator $uriGenerator
+     * @param AppKeyService $appKeyService
      */
     public function __construct(
         BookmarkArgumentSanitization $bookmarkArgumentSanitization,
         Request $request,
-        UriGenerator $uriGenerator
+        UriGenerator $uriGenerator,
+        AppKeyService $appKeyService
     ) {
         $this->bookmarkArgumentSanitization = $bookmarkArgumentSanitization;
         $this->request = $request;
         $this->uriGenerator = $uriGenerator;
+        $this->appKeyService = $appKeyService;
     }
 
     /**
@@ -45,6 +49,13 @@ class BookmarkService
     public function getBookmarks(array $arguments): array
     {
         $sanitizedArguments = $this->bookmarkArgumentSanitization->sanitizeArguments($arguments);
+        $appKey = $this->appKeyService->getAppKey($sanitizedArguments['user'], $arguments['password']);
+
+        if ($appKey === null) {
+            return [];
+        }
+
+        $sanitizedArguments['appkey'] = $appKey;
         $uri = $this->uriGenerator->buildBookmarkList($sanitizedArguments);
 
         return $this->request->process($uri) ?? [];

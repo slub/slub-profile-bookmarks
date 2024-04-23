@@ -25,6 +25,15 @@
 				<source>Argument identifier: The parameter needs to be written in a specific identifier. Default value "tx_slubfindbookmarks_bookmarklist". Change only if you know what you do.</source>
 				<target>Parameter ID: Die Parameter benötigen einen spezifischen Container. Default-Wert "tx_slubfindbookmarks_bookmarklist". Nur ändern, wenn wirklich notwendig.</target>
 			</trans-unit>
+
+			<trans-unit id="extensionConfiguration.appKey.requestUri" resname="extensionConfiguration.appKey.requestUri">
+				<source>URI: The uri has to begin with "https://". Another DDEV container can be addressed directly via the container with "https: // ddev - ### YOUR-CONTAINER ### - web" or the domain, if configured "external_links".</source>
+				<target>URI: Die URI muss mit "https://" anfangen. Ein anderer DDEV-Container kann direkt über den Container mit "https://ddev-###YOUR-CONTAINER###-web" angesprochen werden oder die Domain, wenn "external_links" konfiguriert.</target>
+			</trans-unit>
+			<trans-unit id="extensionConfiguration.appKey.requestArgumentIdentifier" resname="extensionConfiguration.appKey.requestArgumentIdentifier">
+				<source>Argument identifier: The parameter needs to be written in a specific identifier. Default value "tx_slubaccount_account". Change only if you know what you do.</source>
+				<target>Parameter ID: Die Parameter benötigen einen spezifischen Container. Default-Wert "tx_slubaccount_account". Nur ändern, wenn wirklich notwendig.</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

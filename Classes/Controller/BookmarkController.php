@@ -37,7 +37,16 @@ class BookmarkController extends ActionController
      */
     public function listAction(): ResponseInterface
     {
-        $bookmarks = $this->bookmarkService->getBookmarks($this->request->getArguments());
+        $arguments = $this->request->getArguments();
+        /**
+         * IMPORTANT
+         * ---------
+         * The api to get the api key requires a password from the user we do not have.
+         * Well, fake the password and disable credential check at katalog service
+         * account extension via "plugin.tx_slubaccount.settings.debugapi".
+         */
+        $arguments['password'] = 'password';
+        $bookmarks = $this->bookmarkService->getBookmarks($arguments);
 
         $this->view->setVariablesToRender(['bookmarkList']);
         $this->view->assign('bookmarkList', $bookmarks);

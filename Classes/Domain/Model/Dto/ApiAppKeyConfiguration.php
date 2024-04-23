@@ -16,9 +16,9 @@ use Slub\SlubProfileBookmarks\Utility\ConstantsUtility;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class ApiBookmarkListConfiguration
+class ApiAppKeyConfiguration
 {
-    public const KEY = 'bookmarkList';
+    public const KEY = 'appKey';
 
     protected string $requestUri = '';
     protected string $requestArgumentIdentifier = '';
