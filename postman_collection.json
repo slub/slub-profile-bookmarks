@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "6b24390e-c459-4be4-b38d-a531a8c64240",
+		"name": "SLUB - Profile Service - Bookmark (slub_profile_bookmark)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32157282"
+	},
+	"item": [
+		{
+			"name": "AppKey",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domainCatalogue}}mein-konto/?type=1&tx_slubaccount_account[controller]=API&tx_slubaccount_account[action]=getBookmarksAppkey&L=0&tx_slubaccount_account[username]={{user}}&tx_slubaccount_account[password]=password",
+					"host": [
+						"{{domainCatalogue}}mein-konto"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "1"
+						},
+						{
+							"key": "tx_slubaccount_account[controller]",
+							"value": "API"
+						},
+						{
+							"key": "tx_slubaccount_account[action]",
+							"value": "getBookmarksAppkey"
+						},
+						{
+							"key": "L",
+							"value": "0"
+						},
+						{
+							"key": "tx_slubaccount_account[username]",
+							"value": "{{user}}"
+						},
+						{
+							"key": "tx_slubaccount_account[password]",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domainCatalogue}}/merkliste/api/?type=1469315139&tx_slubfindbookmarks_bookmarklist[controller]=BookmarkList&tx_slubfindbookmarks_bookmarklist[action]=getBookmarks&tx_slubfindbookmarks_bookmarklist[user]={{user}}&tx_slubfindbookmarks_bookmarklist[appkey]={{appKey}}",
+					"host": [
+						"{{domainCatalogue}}"
+					],
+					"path": [
+						"merkliste",
+						"api",
+						""
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "1469315139"
+						},
+						{
+							"key": "tx_slubfindbookmarks_bookmarklist[controller]",
+							"value": "BookmarkList"
+						},
+						{
+							"key": "tx_slubfindbookmarks_bookmarklist[action]",
+							"value": "getBookmarks"
+						},
+						{
+							"key": "tx_slubfindbookmarks_bookmarklist[user]",
+							"value": "{{user}}"
+						},
+						{
+							"key": "tx_slubfindbookmarks_bookmarklist[appkey]",
+							"value": "{{appKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "user",
+			"value": "4998866",
+			"type": "default"
+		},
+		{
+			"key": "domain",
+			"value": "https://ddev-slub-profile-service.ddev.site/",
+			"type": "default"
+		},
+		{
+			"key": "domainCatalogue",
+			"value": "https://katalog.ddev.site/",
+			"type": "string"
+		},
+		{
+			"key": "appKey",
+			"value": "6627b6fab58c1",
+			"type": "string"
+		}
+	]
+}

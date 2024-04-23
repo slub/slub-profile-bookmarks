@@ -39,10 +39,9 @@ class JsonView extends ExtbaseJsonView
             ],
             'bookmarks' => [
                 '_descendAll' => [
-                    '_only' => [
-                        'crdate',
-                        'title',
-                        'recordid'
+                    '_exclude' => [
+                        'uid',
+                        'pid',
                     ],
                 ]
             ]
