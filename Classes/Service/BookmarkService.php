@@ -58,6 +58,6 @@ class BookmarkService
         $sanitizedArguments['appkey'] = $appKey;
         $uri = $this->uriGenerator->buildBookmarkList($sanitizedArguments);
 
-        return $this->request->process($uri) ?? [];
+        return $this->request->process($uri) ?? ['bookmarks' => []];
     }
 }
