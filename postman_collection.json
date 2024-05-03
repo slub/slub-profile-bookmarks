@@ -118,11 +118,6 @@
 			"type": "default"
 		},
 		{
-			"key": "domain",
-			"value": "https://ddev-slub-profile-service.ddev.site/",
-			"type": "default"
-		},
-		{
 			"key": "domainCatalogue",
 			"value": "https://katalog.ddev.site/",
 			"type": "string"
