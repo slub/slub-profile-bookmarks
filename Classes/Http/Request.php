@@ -84,7 +84,8 @@ class Request
     {
         $content = '';
 
-        if ($response->getStatusCode() === 200 &&
+        if (
+            $response->getStatusCode() === 200 &&
             strpos($response->getHeaderLine('Content-Type'), 'application/json') === 0
         ) {
             $content = (array)json_decode($response->getBody()->getContents(), true);

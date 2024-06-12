@@ -20,6 +20,7 @@ class ApiBookmarkListConfiguration
 {
     public const KEY = 'bookmarkList';
 
+    protected string $apiKey = '';
     protected string $requestUri = '';
     protected string $requestArgumentIdentifier = '';
 
@@ -27,8 +28,25 @@ class ApiBookmarkListConfiguration
     {
         $configuration = $this->getConfiguration(ConstantsUtility::EXTENSION_KEY)[self::KEY];
 
+        empty($configuration['apiKey']) ?: $this->setApiKey($configuration['apiKey']);
         empty($configuration['requestArgumentIdentifier']) ?: $this->setRequestArgumentIdentifier($configuration['requestArgumentIdentifier']);
         empty($configuration['requestUri']) ?: $this->setRequestUri($configuration['requestUri']);
+    }
+
+    /**
+     * @return string
+     */
+    public function getApiKey(): string
+    {
+        return $this->apiKey;
+    }
+
+    /**
+     * @param string $apiKey
+     */
+    public function setApiKey(string $apiKey = ''): void
+    {
+        $this->apiKey = $apiKey;
     }
 
     /**
