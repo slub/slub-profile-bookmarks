@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "6b24390e-c459-4be4-b38d-a531a8c64240",
+		"name": "SLUB - Profile Service - Bookmark (slub_profile_bookmark)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32157282"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/merkliste/{{user}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"merkliste",
+						"{{user}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "user",
+			"value": "4998866",
+			"type": "default"
+		},
+		{
+			"key": "domain",
+			"value": "https://ddev-slub-profile-service.ddev.site/",
+			"type": "string"
+		}
+	]
+}
